@@ -1,3 +1,5 @@
+.. image:: https://coveralls.io/repos/github/tdsymonds/djangocms-flexslider/badge.svg?branch=master :target: https://coveralls.io/github/tdsymonds/djangocms-flexslider?branch=master 
+
 djangocms-flexslider
 =====================
 This is a simple `django-cms`_ plugin that implements the JavaScript `FlexSlider`_ library. 
