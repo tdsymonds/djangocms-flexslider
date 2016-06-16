@@ -1,4 +1,6 @@
-.. image:: https://coveralls.io/repos/github/tdsymonds/djangocms-flexslider/badge.svg?branch=master :target: https://coveralls.io/github/tdsymonds/djangocms-flexslider?branch=master 
+.. image:: https://travis-ci.org/tdsymonds/djangocms-flexslider.svg?branch=master
+    :target: https://travis-ci.org/tdsymonds/djangocms-flexslider
+.. image:: https://coveralls.io/repos/github/tdsymonds/djangocms-flexslider/badge.svg?branch=master&t=1 :target: https://coveralls.io/github/tdsymonds/djangocms-flexslider?branch=master
 
 djangocms-flexslider
 =====================
