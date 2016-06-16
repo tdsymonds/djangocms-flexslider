@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Djangocms-flexslider by tdsymonds</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Djangocms-flexslider</h1>
+        <h2>A simple django-cms plugin implementing the Javascript FlexSlider library</h2>
+        <a href="https://github.com/tdsymonds/djangocms-flexslider" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="djangocms-flexslider" class="anchor" href="#djangocms-flexslider" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>djangocms-flexslider</h1>
+
+<p>This is a simple django-cms plugin that implements the JavaScript FlexSlider library.</p>
+
+<h2>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<ul>
+<li>  django&gt;=1.8</li>
+<li>  django-cms&gt;=3.2</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>To install:</p>
+
+<pre><code>pip install djangocms-flexslider
+</code></pre>
+
+<p>Then add djangocms-flexslider to your installed apps:</p>
+
+<pre><code>INSTALLED_APPS = [
+    ...
+    'djangocms_flexslider',
+    ...
+]
+</code></pre>
+
+<p>If you’re not already using django-filer, easy-thumbnails and djangocms-text-ckeditor then these too will need to be added to your installed apps:</p>
+
+<pre><code>INSTALLED_APPS = [
+    ...
+    'djangocms_text_ckeditor',
+    'easy_thumbnails',
+    'filer',
+    ...
+]
+</code></pre>
+
+<p>And run the migrations:</p>
+
+<pre><code>./manage.py migrate
+</code></pre>
+
+<p>The package assume that jQuery has been added to the site already. So if you’re not using already, please add to you templates/base.html:</p>
+
+<pre lang="sourceCode"><code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h2>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h2>
+
+<p>The FlexSlider JS and CSS are by default loaded from the below CDN. If you wish to override this, this can be done in your settings.py file by adding the below with your updated URLs. This is optional.</p>
+
+<pre lang="sourceCode"><code>DJANGOCMS_FLEXSLIDER = {
+    'JS_URL': 'https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.1/jquery.flexslider.min.js',
+    'CSS_URL': 'https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.1/flexslider.min.css'
+}
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>The slider plugin is added to page, where the configuration for the slider is set. The settings allow you to add a carousel thumbnail slider if you wish, you are also provided the ability to pass the JSON config for both the carousel and the slider.</p>
+
+<p>There are many FlexSlider examples on their site, or you can view the full FlexSlider properties. The configuration JSON object is optional, so you have no obligation to provide this. A simple example of the config with a carousel is provided below.</p>
+
+<p>Once the slider has been setup, slides are added by adding child slide plugins to the slider. Each slide has to have an image, (I’ve used django-filer for the images), and can optionally have an explicit height and/or width, a caption, url link or page link as well.</p>
+
+<h2>
+<a id="example-json-config" class="anchor" href="#example-json-config" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example JSON Config</h2>
+
+<p>Slider:</p>
+
+<pre lang="sourceCode"><code>{
+  animation: "slide",
+  smoothHeight: true,
+  controlNav: false,
+  animationLoop: false,
+  slideshow: false,
+  sync: "#carousel"
+}
+</code></pre>
+
+<p>Carousel:</p>
+
+<pre lang="sourceCode"><code>{
+  animation: "slide",
+  controlNav: false,
+  animationLoop: false,
+  slideshow: false,
+  itemWidth: 210,
+  itemMargin: 5,
+  asNavFor: '#slider'
+}
+</code></pre>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/tdsymonds/djangocms-flexslider/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/tdsymonds/djangocms-flexslider/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/tdsymonds/djangocms-flexslider"></a> is maintained by <a href="https://github.com/tdsymonds">tdsymonds</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
