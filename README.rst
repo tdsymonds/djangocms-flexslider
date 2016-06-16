@@ -94,12 +94,6 @@ Carousel:
 
 
 
-
-
-
-
-
-
 .. _django-cms: https://github.com/divio/django-cms
 .. _FlexSlider: http://www.woothemes.com/flexslider/
 .. _FlexSlider examples: http://flexslider.woothemes.com/index.html
