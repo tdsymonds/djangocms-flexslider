@@ -1,0 +1,49 @@
+{% load cms_tags sekizai_tags %}
+
+<div id="{{ instance.slider_id }}" class="flexslider">
+	<ul class="slides">
+		{% for plugin in instance.child_plugin_instances %}
+			<li>
+				{% if plugin.page_url %}
+					<a href="{{ plugin.page_url.get_absolute_url }}">
+				{% elif plugin.link_url %}
+					<a href="{{ plugin.link_url }}" target="_blank">
+				{% endif %}
+				{% render_plugin plugin %}
+				{% if plugin.caption %}
+					<p class="flex-caption">{{ plugin.caption|safe }}</p>
+				{% endif %}
+				{% if plugin.page_url or plugin.link_url %}
+					</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+
+{% if instance.carousel %}
+	<div id="{{ instance.carousel_id }}" class="flexslider">
+		<ul class="slides">
+			{% for plugin in instance.child_plugin_instances %}
+				<li>{% render_plugin plugin %}</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endif %}
+
+
+{% addtoblock "css" %}
+	<link rel="stylesheet" type="text/css" href="{{ app_settings.CSS_URL }}">
+{% endaddtoblock %}
+
+{% addtoblock "js" %}
+	<script type="text/javascript" src="{{ app_settings.JS_URL }}"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#{{ instance.slider_id }}').flexslider({% if instance.slider_config %}{{ instance.slider_config|safe }}{% endif %});
+			{% if instance.carousel %}
+				$('#{{ instance.carousel_id }}').flexslider({% if instance.carousel_config %}{{ instance.carousel_config|safe }}{% endif %});
+			{% endif %}
+		});
+	</script>
+{% endaddtoblock %}

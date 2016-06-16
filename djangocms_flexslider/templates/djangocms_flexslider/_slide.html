@@ -1,0 +1,5 @@
+{% load thumbnail %}
+
+{% thumbnail instance.image instance.get_dimensions crop subject_location=instance.image.subject_location as photo %}
+<img src="{{ photo.url }}" width="{{ photo.width }}" height="{{ photo.height }}" alt="image">
+

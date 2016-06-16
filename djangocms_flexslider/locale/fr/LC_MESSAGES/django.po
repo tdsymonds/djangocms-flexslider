@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-16 08:32-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: djangocms_flexslider/apps.py:10
+msgid "djangocms flexslider app"
+msgstr ""
+
+#: djangocms_flexslider/cms_plugins.py:15 djangocms_flexslider/models.py:35
+msgid "Slider"
+msgstr ""
+
+#: djangocms_flexslider/cms_plugins.py:16
+#: djangocms_flexslider/cms_plugins.py:33
+msgid "DjangoCMS FlexSlider"
+msgstr ""
+
+#: djangocms_flexslider/cms_plugins.py:32 djangocms_flexslider/models.py:60
+msgid "Slide"
+msgstr ""
+
+#: djangocms_flexslider/forms.py:13
+msgid "page"
+msgstr ""
+
+#: djangocms_flexslider/models.py:19
+msgid "name"
+msgstr ""
+
+#: djangocms_flexslider/models.py:20 djangocms_flexslider/models.py:26
+msgid "slider ID"
+msgstr ""
+
+#: djangocms_flexslider/models.py:21 djangocms_flexslider/models.py:27
+msgid "The ID attribute used in the HTML"
+msgstr ""
+
+#: djangocms_flexslider/models.py:22
+msgid "slider config"
+msgstr ""
+
+#: djangocms_flexslider/models.py:23
+msgid ""
+"The JSON object passed to Flexslider. For more info <a target=\"_blank\" "
+"href=\"https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties"
+"\">click here</a>"
+msgstr ""
+
+#: djangocms_flexslider/models.py:24
+msgid "carousel"
+msgstr ""
+
+#: djangocms_flexslider/models.py:25
+msgid "Add a thumbnail carousel to the slider"
+msgstr ""
+
+#: djangocms_flexslider/models.py:28
+msgid "carousel config"
+msgstr ""
+
+#: djangocms_flexslider/models.py:29
+msgid ""
+"The JSON object passed to Flexslider for the carousel. For more info <a "
+"target=\"_blank\" href=\"https://github.com/woothemes/FlexSlider/wiki/"
+"FlexSlider-Properties\">click here</a>"
+msgstr ""
+
+#: djangocms_flexslider/models.py:36
+msgid "Sliders"
+msgstr ""
+
+#: djangocms_flexslider/models.py:45
+msgid "width"
+msgstr ""
+
+#: djangocms_flexslider/models.py:45 djangocms_flexslider/models.py:46
+msgid "in pixels"
+msgstr ""
+
+#: djangocms_flexslider/models.py:46
+msgid "height"
+msgstr ""
+
+#: djangocms_flexslider/models.py:47
+msgid "caption"
+msgstr ""
+
+#: djangocms_flexslider/models.py:48
+msgid "Optional caption that is displayed with the image"
+msgstr ""
+
+#: djangocms_flexslider/models.py:49
+msgid "link url"
+msgstr ""
+
+#: djangocms_flexslider/models.py:50
+msgid "If a url is specified, this slide will act as a hyperlink to that url."
+msgstr ""
+
+#: djangocms_flexslider/models.py:51
+msgid "page url"
+msgstr ""
+
+#: djangocms_flexslider/models.py:52
+msgid ""
+"If a page is specified, this slide will act as a hyperlink to that page."
+msgstr ""
+
+#: djangocms_flexslider/models.py:61
+msgid "Slides"
+msgstr ""
+
+#: djangocms_flexslider/models.py:72
+msgid "You cannot have both a link url and page url specified"
+msgstr ""

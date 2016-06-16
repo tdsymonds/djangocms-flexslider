@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-include djangocms_flexslider/locale *
+recursive-include djangocms_flexslider/migrations *
+recursive-include djangocms_flexslider/templates *
+recursive-include djangocms_flexslider/tests *

@@ -1,0 +1,17 @@
+[run]
+branch = True
+source = djangocms_flexslider
+
+[report]
+omit = 
+    *migrations*
+    *tests*
+    *__init__*
+    *apps*
+
+exclude_lines =
+    # Don't complain about missing debug-only code:
+    def __repr__
+    if self\.debug
+
+ignore_errors = True
